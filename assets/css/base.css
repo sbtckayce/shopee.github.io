@@ -1,0 +1,251 @@
+:root{
+    --white-color :#fff;
+    --black-color :#000;
+    --text-color:#003140;
+    --primary-color:#71d9ff;
+    --border-color:#cdf1ff;
+    --navbar-height:35px;
+    --header-height:110px;
+    --header-height-search : 70px;
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    /* width: 1600px; */
+    font-size: 62.5%;
+    line-height: 16px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+@keyframes in{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+@keyframes big{
+    from{
+        transform: scale(0.8);
+    }to{
+        transform: scale(1);
+    }
+}
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: in ease-in 0.1s;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity linear 0.2s;
+    
+   
+}
+.close-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+.close-dialog{
+    font-size: 30px;
+    top: 2px;
+    right: 8px;
+    position: absolute;
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 600;
+    margin-top: 10px;
+    background-color : var(--black-color);
+}
+.close-dialog:hover{
+  
+    background-color: red;
+}
+.modal:target{
+   visibility: visible; 
+   opacity: 1;
+   
+}
+.modal_animation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(189, 243, 250, 0.5);
+}
+.modal__body{
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: big ease-in 1s;
+    
+    
+}
+.btn{
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border-radius: 2px;
+    border :none;
+     line-height: 15px;
+    font-size: 15px;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    align-items: center;
+    justify-content: center;
+   display: inline-flex;
+
+}
+.btn.btn-diffrent:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+.btn.btn--main{
+  
+    color: var(--white-color);
+    background-color :var(--text-color);
+}
+/* .btn.btn--disable{
+     color: rgb(150, 129, 129);
+     cursor: default;
+     background-color: rgb(223, 219, 219);
+} */
+.btn.btn-size{
+    height: 30px;
+    font-size: 14px;
+    padding: 4px 16px;
+
+}
+.grid{
+    width: 1250px;
+    max-width: 100%;
+    margin: 0 auto;
+    
+}
+.grid_full-width{
+    width: 100%;
+
+}
+.grid_row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+   
+}
+
+.grid__colum-2{
+   
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+   
+}
+.grid__colum-2-4{
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+   
+}
+.grid__colum-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+    
+}
+.select-input{
+    position: relative;
+    min-width: 180px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+}
+.select-input__label{
+    font-size: 14px;
+    
+}
+.select-input__icon{
+    font-size: 14px;
+    color: rgb(145, 132, 132);
+    top:1px;
+    position: relative;
+
+}
+.select-input__list{
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding : 8px 16px;
+    list-style: none;
+    display: none;
+
+}
+.select-input__link{
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    color: var(--text-color);
+}
+.select-input__link:hover{
+    color: red;
+}
+.select-input:hover .select-input__list{
+    display: block;
+}
+.page-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+
+}
+.page-number-item{
+    margin: 0 10px;
+}
+.page-number-link{
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--black-color);
+    min-width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+    font-weight: 400;
+}
+.page-icon{
+
+}
+.page-number-link-color.page-number-link{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+
+}
+.page-home{
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+}
